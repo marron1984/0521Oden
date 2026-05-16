@@ -8,14 +8,15 @@ XF=0.6   # crossfade duration
 # chain xfade with cumulative offsets (prev_total - n*XF)
 ffmpeg -y \
  -i "$S/s1.mp4" -i "$S/s2.mp4" -i "$S/s3.mp4" -i "$S/s4.mp4" -i "$S/s5.mp4" -i "$S/s6.mp4" \
- -f lavfi -t 30 -i anullsrc=channel_layout=stereo:sample_rate=44100 \
+ -i B.mp3 \
  -filter_complex "
   [0:v][1:v]xfade=transition=fade:duration=${XF}:offset=$(echo "4-$XF"|bc)[a];
   [a][2:v]xfade=transition=fade:duration=${XF}:offset=$(echo "4+5-2*$XF"|bc)[b];
   [b][3:v]xfade=transition=fade:duration=${XF}:offset=$(echo "4+5+5-3*$XF"|bc)[c];
   [c][4:v]xfade=transition=fade:duration=${XF}:offset=$(echo "4+5+5+5-4*$XF"|bc)[d];
-  [d][5:v]xfade=transition=fade:duration=${XF}:offset=$(echo "4+5+5+5+5-5*$XF"|bc)[v]
- " -map "[v]" -map "6:a" -shortest \
+  [d][5:v]xfade=transition=fade:duration=${XF}:offset=$(echo "4+5+5+5+5-5*$XF"|bc)[v];
+  [6:a]atrim=0:27,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.8,afade=t=out:st=25.5:d=1.5,volume=0.85[aud]
+ " -map "[v]" -map "[aud]" -shortest \
  -c:v libx264 -preset medium -crf 19 -pix_fmt yuv420p -movflags +faststart \
  -c:a aac -b:a 128k \
  "reel_島豚の温しゃぶサラダ_トマトスライス.mp4"
