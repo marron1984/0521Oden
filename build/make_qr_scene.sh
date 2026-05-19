@@ -21,7 +21,7 @@ ffmpeg -y -loop 1 -t "$DUR" -i build/qr.png -filter_complex "
       drawtext=fontfile=${FONT}:text='${DOTS}':fontcolor=${CREAM}@0.55:fontsize=34:x=(w-tw)/2:y=1700,
       drawtext=fontfile=${FONT}:text='ご予約はこちら♡':fontcolor=white:fontsize=88:x=(w-tw)/2:y='$(slide_y 70 0)':alpha='$(fade 0)':borderw=3:bordercolor=${RED}@0.25,
       drawtext=fontfile=${FONT}:text='＼ QRコードで かんたんネット予約 ／':fontcolor=${YEL}:fontsize=52:x=(w-tw)/2:y=185:alpha='$(fade 0.4)',
-      drawtext=fontfile=${FONT}:text='数量限定・お席に限りあり・お早めに':fontcolor=white:fontsize=46:x=(w-tw)/2:y=1745:alpha='$(fade 0.5)',
+      drawtext=fontfile=${FONT}:text='ご来店、お待ちしております♡':fontcolor=white:fontsize=48:x=(w-tw)/2:y=1745:alpha='$(fade 0.5)',
       format=yuv420p[v]
  " -map "[v]" -r "$FPS" -c:v libx264 -preset medium -crf 19 -pix_fmt yuv420p "$OUT/s6.mp4"
 echo "s6 built"; ls -la "$OUT/s6.mp4"

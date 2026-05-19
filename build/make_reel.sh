@@ -48,27 +48,27 @@ mkscene () {
 # ---- Scene 1: HOOK ----
 T1="drawtext=fontfile=${FONT}:text='女性に大人気♡':fontcolor=white:fontsize=92:x=(w-tw)/2:y='$(slide_y 75 0)':alpha='$(fade 0)':borderw=4:bordercolor=${RED}@0.3,\
 drawtext=fontfile=${FONT}:text='＼ 新メニュー登場 ／':fontcolor=${YEL}:fontsize=62:x=(w-tw)/2:y=220:alpha='$(fade 0.4)',\
-drawtext=fontfile=${FONT}:text='今だけのお楽しみ':fontcolor=white:fontsize=76:x=(w-tw)/2:y='$(slide_y 1565 0.2)':alpha='$(fade 0.2)',\
+drawtext=fontfile=${FONT}:text='新しいおいしさ、登場♡':fontcolor=white:fontsize=68:x=(w-tw)/2:y='$(slide_y 1560 0.2)':alpha='$(fade 0.2)',\
 drawtext=fontfile=${FONT}:text='ヘルシー＆映えるおでん':fontcolor=${YEL}:fontsize=50:x=(w-tw)/2:y=1700:alpha='$(fade 0.6)'"
-mkscene 1 "IMG_9905.jpg" 4 "min(zoom+0.0010,1.12)" "${PINK}" "${PINK}" "${CREAM}" "$T1"
+mkscene 1 "build/spread1.jpg" 4 "min(zoom+0.0010,1.12)" "${PINK}" "${PINK}" "${CREAM}" "$T1"
 
 # ---- Scene 2: 島豚の温しゃぶサラダ ----
 T2="drawtext=fontfile=${FONT}:text='♡ 新登場 ♡':fontcolor=${PINK}:fontsize=50:x=70:y=70:box=1:boxcolor=white:boxborderw=18:alpha='$(fade 0)',\
 drawtext=fontfile=${FONT}:text='島豚の温しゃぶサラダ':fontcolor=white:fontsize=78:x=(w-tw)/2:y='$(slide_y 200 0.25)':alpha='$(fade 0.25)':borderw=3:bordercolor=${RED}@0.25,\
 drawtext=fontfile=${FONT}:text='やわらか島豚＋たっぷり野菜':fontcolor=${BROWN}:fontsize=52:x=(w-tw)/2:y=1565:alpha='$(fade 0.3)',\
-drawtext=fontfile=${FONT}:text='女性に人気のヘルシー一品♡':fontcolor=${RED}:fontsize=56:x=(w-tw)/2:y='$(slide_y 1685 0.55)':alpha='$(fade 0.55)'"
+drawtext=fontfile=${FONT}:text='女性に人気のヘルシーな一品♡':fontcolor=${RED}:fontsize=54:x=(w-tw)/2:y='$(slide_y 1685 0.55)':alpha='$(fade 0.55)'"
 mkscene 2 "IMG_9908.jpg" 5 "min(zoom+0.0009,1.11)" "${PINK}" "${MINT}" "${CREAM}" "$T2"
 
 # ---- Scene 3: トマトスライス ----
-T3="drawtext=fontfile=${FONT}:text='♡ 相性抜群 ♡':fontcolor=${RED}:fontsize=50:x=70:y=70:box=1:boxcolor=white:boxborderw=18:alpha='$(fade 0)',\
+T3="drawtext=fontfile=${FONT}:text='♡ 栄養満点 ♡':fontcolor=${RED}:fontsize=50:x=70:y=70:box=1:boxcolor=white:boxborderw=18:alpha='$(fade 0)',\
 drawtext=fontfile=${FONT}:text='トマトスライス':fontcolor=white:fontsize=90:x=(w-tw)/2:y='$(slide_y 190 0.25)':alpha='$(fade 0.25)':borderw=3:bordercolor=${BROWN}@0.25,\
-drawtext=fontfile=${FONT}:text='¥350':fontcolor=white:fontsize=118:x=(w-tw)/2:y='$(slide_y 1545 0.3)':alpha='$(fade 0.3)',\
-drawtext=fontfile=${FONT}:text='(税込)':fontcolor=white:fontsize=42:x=(w-tw)/2:y=1705:alpha='$(fade 0.6)'"
+drawtext=fontfile=${FONT}:text='さっぱり美味しい♡':fontcolor=white:fontsize=78:x=(w-tw)/2:y='$(slide_y 1545 0.3)':alpha='$(fade 0.3)',\
+drawtext=fontfile=${FONT}:text='箸休めにもぴったり':fontcolor=white:fontsize=46:x=(w-tw)/2:y=1700:alpha='$(fade 0.6)'"
 mkscene 3 "IMG_9915.jpg" 5 "min(zoom+0.0009,1.11)" "${RED}" "${RED}" "${CREAM}" "$T3"
 
 # ---- Scene 4: 限定・希少性 (今行く理由) ----
-T4="drawtext=fontfile=${FONT}:text='＼ 数量限定 ／':fontcolor=${YEL}:fontsize=74:x=(w-tw)/2:y='$(slide_y 115 0)':alpha='$(fade 0)',\
-drawtext=fontfile=${FONT}:text='旬のピークは今だけ':fontcolor=white:fontsize=62:x=(w-tw)/2:y=240:alpha='$(fade 0.35)',\
+T4="drawtext=fontfile=${FONT}:text='＼ 新作続々 ／':fontcolor=${YEL}:fontsize=74:x=(w-tw)/2:y='$(slide_y 115 0)':alpha='$(fade 0)',\
+drawtext=fontfile=${FONT}:text='旬モノも あります':fontcolor=white:fontsize=62:x=(w-tw)/2:y=240:alpha='$(fade 0.35)',\
 drawtext=fontfile=${FONT}:text='仕込みは毎朝、職人の手仕事。':fontcolor=white:fontsize=44:x=(w-tw)/2:y=1530:alpha='$(fade 0.25)',\
 drawtext=fontfile=${FONT}:text='無くなり次第、終了です。':fontcolor=${YEL}:fontsize=50:x=(w-tw)/2:y=1615:alpha='$(fade 0.5)',\
 drawtext=fontfile=${FONT}:text='＝ 今、行く理由 ＝':fontcolor=${RED}:fontsize=56:x=(w-tw)/2:y='$(slide_y 1720 0.75)':alpha='$(fade 0.75)':box=1:boxcolor=white:boxborderw=14"
